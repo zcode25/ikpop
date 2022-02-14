@@ -26,10 +26,12 @@
 - CSS
 - JavaScript
 - PHP
+- Bootstrap 5
 - YouTube Data API
 
 ## Development
 ### Sources
+- Bootstrap 5 (https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 - YouTube Data API (https://developers.google.com/youtube/v3/getting-started)
 
 ### Installation
