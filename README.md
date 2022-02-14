@@ -9,9 +9,6 @@
     <a href="https://ikpop.rf.gd">
         <img src="https://img.shields.io/badge/version-iKPOP%20v3.1.0-EC227B"/>
     </a>
-    <a href="https://github.com/zcode25/ikpop">
-        <img src="https://img.shields.io/github/stars/zcode25/ikpop?color=important" />
-    </a>
 </div>
 
 <div align="center">
