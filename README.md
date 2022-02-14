@@ -30,7 +30,7 @@
 
 ## Development
 ### Sources
-- YouTube IFrame Player API (https://developers.google.com/youtube/v3/getting-started)
+- YouTube Data API (https://developers.google.com/youtube/v3/getting-started)
 
 ### Installation
 - Open the XAMPP application, then run the Apache modules.
