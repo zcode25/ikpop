@@ -76,7 +76,7 @@ $groups2 = get_groups($groups);
                             <div class="col-12">
                                 <div class="card-body">
                                     <h3 class="card-title fw-bold">iKPOP</h3>
-                                    <p class="card-text justify">iKPOP adalah sebuah website yang berisi kumpulan MV KPOP Streaming. Nikmatilah keseruanya dimana pun dan kapan pun.</p>
+                                    <p class="card-text justify">iKPOP is a website that contains a collection of KPOP Streaming MVs. Enjoy the fun anywhere and anytime.</p>
                                 </div>
                             </div>
                         </div>
