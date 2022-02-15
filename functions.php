@@ -86,7 +86,7 @@ function get_music($music_link)
 function get_comments($music_link)
 {
     $comments = [];
-    $result = get_CURL('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=' . $music_link . '&maxResults=25&key=AIzaSyAxisypbiILUlLzMdiddBmElOxNbp6fR7E');
+    $result = get_CURL('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=' . $music_link . '&maxResults=15&key=AIzaSyAxisypbiILUlLzMdiddBmElOxNbp6fR7E');
     $i = 0;
     foreach ($result['items'] as $result) {
         $comments[$i]['comments_textDisplay'] = $result['snippet']['topLevelComment']['snippet']['textOriginal'];
