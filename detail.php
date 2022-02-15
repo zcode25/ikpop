@@ -65,7 +65,7 @@ $musics3 = get_musics($random);
                     <div class="videoWrapper">
                         <iframe src="https://www.youtube.com/embed/<?= $music['musics_link']; ?>/?controls=1&showinfo=0&rel=0&loop=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YouTube video player" frameborder="0" class="video"></iframe>
                     </div>
-                    <h5 class="my-3"><?= $music['musics_name']; ?></h5>
+                    <h6 class="lh-base my-3"><?= $music['musics_name']; ?></h6>
                     <?php $tgl = date_create($music['musics_date']); ?>
                     <p class="text-secondary mb-3"><?= date_format($tgl, 'd F Y') ?></p>
                     <hr>
@@ -76,7 +76,7 @@ $musics3 = get_musics($random);
                             </div>
                             <div class="col-md-10 col-xl-10 col-8 align-self-center">
                                 <div class="card-body">
-                                    <h5 class="card-title fw-bold"><?= $groups2['groups_name']; ?></h5>
+                                    <h6 class="card-title fw-bold"><?= $groups2['groups_name']; ?></h6>
                                     <p class="card-text text-secondary fw-normal" style="font-size: 14px;"><?= number_format($groups2['subscriber'], 0, ".", "."); ?> Subscriber</p>
                                     <div class="g-ytsubscribe" data-channelid="<?= $groups2['groups_link']; ?>" data-layout="default" data-count="hidden"></div>
                                 </div>
@@ -128,7 +128,7 @@ $musics3 = get_musics($random);
                                         </div>
                                         <div class="col-xl-8 align-self-center">
                                             <div class="card-body">
-                                                <p class="card-title fw-bold"><?= $music['musics_name']; ?></p>
+                                                <p class="card-title fw-bold v-title"><?= $music['musics_name']; ?></p>
                                                 <p class="card-text text-secondary"><?= $groups2['groups_name']; ?></p>
                                             </div>
                                         </div>

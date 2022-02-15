@@ -74,7 +74,7 @@ if (isset($_POST["submit"])) {
                                     </div>
                                     <div class="col-10 align-self-center">
                                         <div class="card-body">
-                                            <h5 class="card-title fw-bold"><?= $group['groups_name']; ?></h5>
+                                            <h6 class="card-title fw-bold"><?= $group['groups_name']; ?></h6>
                                             <p class="card-text text-secondary fw-normal" style="font-size: 14px;"><?= number_format($group['subscriber'], 0, ".", "."); ?> Subscriber</p>
                                         </div>
                                     </div>
