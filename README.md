@@ -35,6 +35,8 @@
 - Open the XAMPP application, then run the Apache modules.
 - Open the `/htdocs` folder.
 - Open Git Bash, then run `git clone https://github.com/zcode25/ikpop.git`.
+- Create a database with the name `ikpop`.
+- Import file `/database/ikpop` into database.
 - Open `http://localhost/ikpop` with your browser to see the result.
 
 ## Contribute
