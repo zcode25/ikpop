@@ -35,6 +35,10 @@ $groups2 = get_groups($groups);
 
 <body>
 
+    <div id="preloader" class="align-self-center">
+        <h1 class="fw-bold">iKPOP</h1>
+    </div>
+
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #202020;">
         <div class="container">
             <a class="navbar-brand" href="index.php">
@@ -161,8 +165,8 @@ $groups2 = get_groups($groups);
         </div>
     </section>
 
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
