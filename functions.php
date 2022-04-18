@@ -30,7 +30,7 @@ function get_groups($groups)
     $groups2 = [];
     $i = 0;
     foreach ($groups as $group) {
-        $result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=' . $group['groups_link'] . '&key=AIzaSyAxisypbiILUlLzMdiddBmElOxNbp6fR7E');
+        $result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=' . $group['groups_link'] . '&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
         $groups2[$i]['groups_id'] = $group['groups_id'];
         $groups2[$i]['groups_img'] = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
         // $groups2[$i]['groups_name'] = $result['items'][0]['snippet']['title'];
@@ -45,7 +45,7 @@ function get_groups($groups)
 function get_group($groups)
 {
     $groups2 = [];
-    $result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=' . $groups['groups_link'] . '&key=AIzaSyAxisypbiILUlLzMdiddBmElOxNbp6fR7E');
+    $result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=' . $groups['groups_link'] . '&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
     $groups2['groups_id'] = $groups['groups_id'];
     $groups2['groups_link'] = $groups['groups_link'];
     $groups2['groups_img'] = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
@@ -60,7 +60,7 @@ function get_musics($random)
 {
     $musics3 = [];
     $i = 0;
-    $result = get_CURL('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=' . $random['musics_link'] . '&maxResults=50&key=AIzaSyAxisypbiILUlLzMdiddBmElOxNbp6fR7E');
+    $result = get_CURL('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=' . $random['musics_link'] . '&maxResults=50&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
     foreach ($result['items'] as $result) {
         $musics3[$i]['musics_link'] = $result['snippet']['resourceId']['videoId'];
         $musics3[$i]['musics_thumbnail'] = $result['snippet']['thumbnails']['medium']['url'];
@@ -74,7 +74,7 @@ function get_musics($random)
 function get_music($music_link)
 {
     $music = [];
-    $result = get_CURL('https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=' . $music_link . '&key=AIzaSyAxisypbiILUlLzMdiddBmElOxNbp6fR7E');
+    $result = get_CURL('https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=' . $music_link . '&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
     $music['musics_name'] = $result['items'][0]['snippet']['title'];
     $music['musics_des'] = $result['items'][0]['snippet']['description'];
     $music['musics_date'] = $result['items'][0]['snippet']['publishedAt'];
@@ -86,7 +86,7 @@ function get_music($music_link)
 function get_comments($music_link)
 {
     $comments = [];
-    $result = get_CURL('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=' . $music_link . '&maxResults=15&key=AIzaSyAxisypbiILUlLzMdiddBmElOxNbp6fR7E');
+    $result = get_CURL('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=' . $music_link . '&maxResults=15&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
     $i = 0;
     foreach ($result['items'] as $result) {
         $comments[$i]['comments_textDisplay'] = $result['snippet']['topLevelComment']['snippet']['textOriginal'];
