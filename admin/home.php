@@ -9,7 +9,6 @@ if (!isset($_SESSION["login"])) {
 require '../functions.php';
 
 $groups = query("SELECT * FROM groups ORDER BY groups_name");
-$groups2 = get_groups($groups);
 
 if (isset($_POST["add"])) {
 
@@ -117,17 +116,13 @@ if (isset($_POST["add"])) {
                 </div>
             </div>
             <div class="row">
-                <?php foreach ($groups2 as $group) : ?>
-                    <div class="col-md-6 col-xl-4">
+                <?php foreach ($groups as $group) : ?>
+                    <div class="col-md-6 col-xl-3">
                         <div class="card mb-3" style="cursor: pointer;" onclick="document.location.href = 'group.php?group_id=<?= $group['groups_id']; ?>';">
                             <div class="row g-0">
-                                <div class="col-2 align-self-center">
-                                    <img src="<?= $group['groups_img']; ?>" class="img-fluid rounded" alt="...">
-                                </div>
                                 <div class="col-10 align-self-center">
                                     <div class="card-body">
-                                        <h6 class="card-title fw-bold"><?= $group['groups_name']; ?></h6>
-                                        <p class="card-text text-secondary fw-normal" style="font-size: 14px;"><?= number_format($group['subscriber'], 0, ".", "."); ?> Subscriber</p>
+                                        <h6 class="card-text fw-bold"><?= $group['groups_name']; ?></h6>
                                     </div>
                                 </div>
                             </div>

@@ -25,23 +25,6 @@ function get_CURL($url)
     return json_decode($result, true);
 }
 
-function get_groups($groups)
-{
-    $groups2 = [];
-    $i = 0;
-    foreach ($groups as $group) {
-        $result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=' . $group['groups_link'] . '&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
-        $groups2[$i]['groups_id'] = $group['groups_id'];
-        $groups2[$i]['groups_img'] = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
-        // $groups2[$i]['groups_name'] = $result['items'][0]['snippet']['title'];
-        $groups2[$i]['groups_name'] = $group['groups_name'];
-        $groups2[$i]['subscriber'] = $result['items'][0]['statistics']['subscriberCount'];
-        $i++;
-    }
-
-    return $groups2;
-}
-
 function get_group($groups)
 {
     $groups2 = [];
@@ -49,7 +32,6 @@ function get_group($groups)
     $groups2['groups_id'] = $groups['groups_id'];
     $groups2['groups_link'] = $groups['groups_link'];
     $groups2['groups_img'] = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
-    // $groups2['groups_name'] = $result['items'][0]['snippet']['title'];
     $groups2['groups_name'] = $groups['groups_name'];
     $groups2['subscriber'] = $result['items'][0]['statistics']['subscriberCount'];
 
@@ -86,7 +68,7 @@ function get_music($music_link)
 function get_comments($music_link)
 {
     $comments = [];
-    $result = get_CURL('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=' . $music_link . '&maxResults=15&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
+    $result = get_CURL('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=' . $music_link . '&maxResults=10&key=AIzaSyAardR21OK1mlQY9iBJWlX0hGnxYj8_8oc');
     $i = 0;
     foreach ($result['items'] as $result) {
         $comments[$i]['comments_textDisplay'] = $result['snippet']['topLevelComment']['snippet']['textOriginal'];

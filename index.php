@@ -71,7 +71,7 @@ if (isset($_GET["random"])) {
             <div class="row">
                 <div class="col-xl-8 mb-3">
                     <div class="videoWrapper">
-                        <iframe src="<?= $video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YouTube video player" frameborder="0" class="video"></iframe>
+                        <iframe src="<?= $video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YouTube video player" frameborder="0" class="video" id="video"></iframe>
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -87,7 +87,7 @@ if (isset($_GET["random"])) {
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-xl-12">
-                            <div class="card mb-3" style="cursor: pointer;" onclick="document.location.href = 'index.php?live=F4aby5WN1Rw';">
+                            <div class="card mb-3" id="live" style="cursor: pointer;">
                                 <div class="row g-0">
                                     <div class="col-2 text-center rounded" style="background-color: #EC227B;">
                                         <div class=" p-3">
@@ -105,7 +105,7 @@ if (isset($_GET["random"])) {
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-12">
-                            <div class="card mb-3" style="cursor: pointer;" onclick="document.location.href = 'index.php?random=RDqEy8of1f_3E';">
+                            <div class="card mb-3" id="random" style="cursor: pointer;">
                                 <div class="row g-0">
                                     <div class="col-2 text-center rounded" style="background-color: #EC227B;">
                                         <div class="p-3">
